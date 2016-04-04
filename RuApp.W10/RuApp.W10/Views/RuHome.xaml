@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="RuApp.W10.Views.RuHome"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RuApp.W10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Margin="0,-20,0,0">
+
+
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="35"/>
+			<RowDefinition Height="65"/>
+			<RowDefinition Height="605*"/>
+			<RowDefinition Height="63*"/>
+		</Grid.RowDefinitions>
+		<Grid DataContext="{Binding Groups[0]}" x:Name="header" Grid.Row="0"  d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin, LeftPosition, RightPosition" Grid.RowSpan="2">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition Height="4*"/>
+			</Grid.RowDefinitions>
+			<Image x:Name="headerLogo" Width="58" Grid.Row="1"  Source="../Assets/logo_azul.png" NineGrid="0" Margin="10,28,0,2" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Left"/>
+			<TextBlock x:Name="headertitle" Text="RU" FontSize="32" Margin="65,29,0,10" HorizontalAlignment="Left" Grid.Row="1" Width="41"/>
+			<SymbolIcon x:Name="datalogo" Symbol="CalendarReply" Margin="0,0,125,14" HorizontalAlignment="Right" Width="53" Grid.Row="1" Height="30" VerticalAlignment="Bottom" />
+			<TextBlock x:Name="datablock" Text="{Binding data}"  HorizontalAlignment="Right" FontSize="18.667" Margin="0,39,10,14" Grid.Row="1" Width="114"/>
+		</Grid>
+		<SplitView x:Name="split" DisplayMode="CompactOverlay" CompactPaneLength="45" OpenPaneLength="200" Margin="10,10,0,30" Grid.Row="2" HorizontalAlignment="Left" d:LayoutOverrides="LeftMargin, RightMargin, TopPosition, BottomPosition" Width="200" Grid.RowSpan="2">
+			<SplitView.Content>
+				<Frame Name="SplitFrameContent" Margin="0,0,-215.2,0"></Frame>
+			</SplitView.Content>
+			<SplitView.Pane>
+				<StackPanel>
+					<Button x:Name="MenuButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="BotaoHamburger_Click" Margin="0,5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="43" Background="{x:Null}" FontSize="18.667"/>
+					<!-- ... -->
+					<ListBox SelectionMode="Single"
+							 SelectionChanged="ListBox_SelectionChanged" Background="{x:Null}">
+						<ListBoxItem Name="Cardapio" Background="{x:Null}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock FontFamily="Segoe MDL2 Assets"
+										   FontSize="20"
+										   Text="&#xE80F;" Margin="0,0,0,0"/>
+								<TextBlock FontSize="18"
+										   Margin="20,0,0,0"
+										   Text="Cardapio"/>
+							</StackPanel>
+						</ListBoxItem>
+						<ListBoxItem Name ="Info" FontSize="18.667">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock FontFamily="Segoe MDL2 Assets"
+										   FontSize="20"
+										   Text="&#xE11B;" Margin="0,0,0,0"/>
+								<TextBlock FontSize="18"
+										   Margin="20,0,0,0"
+										   Text="Informações"/>
+							</StackPanel>
+						</ListBoxItem>
+						<ListBoxItem Name="LbSobre" Margin="40,0,0,0"/>
+					</ListBox>
+				</StackPanel>
+
+			</SplitView.Pane>
+		</SplitView>
+		<AppBar Margin="10,0,4,-28" Grid.Row="3" VerticalAlignment="Bottom" Height="53">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="187" d:LayoutOverrides="LeftMargin, RightMargin"/>
+				<StackPanel HorizontalAlignment="Right" Orientation="Horizontal"/>
+				<AppBarButton x:Name="appBarButton" Icon="Sync" Label="Atualizar"   Click="appBarButton_Click" VerticalAlignment="Stretch" d:LayoutOverrides="Width" Margin="0,0,26,6" HorizontalAlignment="Right"/>
+			</Grid>
+		</AppBar>
+
+
+	</Grid>
+
+</Page>

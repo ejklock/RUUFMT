@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="RuApp.W10.ViewInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RuApp.W10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+	<Grid RequestedTheme="Dark">
+		<RelativePanel >
+			<RichTextBlock  TextAlignment="Justify" HorizontalAlignment="Center" Height="630" VerticalAlignment="Top" Margin="10,0,-108.667,-206" Width="340"    >
+				<Paragraph/>
+				<Paragraph/>
+				<Paragraph>
+					<InlineUIContainer>
+						<FontIcon Glyph="&#xE121;" Margin="0,6,0.333,-6" FontWeight="Bold" FontSize="26.667"></FontIcon>
+					</InlineUIContainer>
+					<Run Text=" Horários de Funcionamento" FontSize="16" FontWeight="Bold"/>
+				</Paragraph>
+				<Paragraph/>
+				<Paragraph>
+					<Run Text="Café da manhã : 7:00 - 8:00 h" FontSize="13"/>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Almoço : 11:00 - 13:30 h" FontSize="13"/>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Jantar : 17:00 - 19:30h" FontSize="13"/>
+				</Paragraph>
+				<Paragraph></Paragraph>
+				<Paragraph>
+					<InlineUIContainer>
+						<FontIcon Glyph="&#xE706;" Margin="0,9.333,1,-9.333" FontWeight="Bold" FontSize="26.667"/>
+					</InlineUIContainer>
+					<Run Text=" Café da Manhã" FontWeight="Bold" FontSize="16"></Run>
+				</Paragraph>
+				<Paragraph/>
+				<Paragraph>
+					<Run Text="Pão" FontSize="13"></Run>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Margarina" FontSize="13"></Run>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Geléia" FontSize="13"></Run>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Café" FontSize="13"></Run>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Leite" FontSize="13"></Run>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Achocolatado" FontSize="14"></Run>
+				</Paragraph>
+				<Paragraph/>
+				<Paragraph>
+					<InlineUIContainer>
+						<FontIcon Glyph="&#xE1CB;" Margin="0,9.333,-1,-9.333" FontWeight="Bold" FontSize="26.667"></FontIcon>
+					</InlineUIContainer>
+					<Run Text="  Preços" FontSize="16" FontWeight="Bold"/>
+				</Paragraph>
+				<Paragraph/>
+				<Paragraph>
+					<Run Text="Café da Manhã  R$0,25 (Graduação)" FontSize="13"/>
+				</Paragraph>
+				<Paragraph>
+					<Run Text="Almoço e Jantar R$1,00 (Graduação)" FontSize="13"/>
+				</Paragraph>
+			</RichTextBlock>
+		</RelativePanel>
+	</Grid>
+
+
+</Page>
